@@ -82,7 +82,3 @@ This project is licensed under the MIT License.
 - Kreskin Bejoc
 - Carlos Louis Acula
 - April Joyce Abejo
-
----
-
-**Project Status:** Phase 1 Complete ✅
