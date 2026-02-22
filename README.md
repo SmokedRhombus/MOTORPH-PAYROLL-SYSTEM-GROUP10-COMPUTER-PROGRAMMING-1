@@ -1,13 +1,13 @@
 # MOTORPH-PAYROLL-SYSTEM-GROUP10-COMPUTER-PROGRAMMING-1
-Phase 1: Employee payroll system with automated salary calculations including government mandated deductions. Java based console application for weekly payroll processing.
+Employee payroll system with automated salary calculations including government mandated deductions. Java based console application for weekly payroll processing.
 
 
 
-# MotorPH Payroll System - Phase 1
+# MotorPH Payroll System
 A Java based payroll system that automates employee salary calculations with government mandated deductions.
 
 ## Project Overview
-This is Phase 1 of the MotorPH Payroll System, designed to manage employee details and automatically calculate weekly salaries with Philippine government mandated deductions (SSS, PhilHealth, Pag-IBIG, and Withholding Tax).
+Designed to manage employee details and automatically calculate weekly salaries with Philippine government mandated deductions (SSS, PhilHealth, Pag-IBIG, and Withholding Tax).
 
 ## Features
 
