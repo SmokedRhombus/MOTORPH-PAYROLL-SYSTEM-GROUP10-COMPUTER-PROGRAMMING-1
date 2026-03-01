@@ -242,7 +242,7 @@ The hourly rate formula `BasicSalary / 21 / 8` is based on 21 working days per m
 
 This method opens `attendance.csv` line by line using a `BufferedReader`. The first line (the header row) is skipped automatically.
 
-Each subsequent line is passed to `parseCsvLine()`, which splits it into fields while correctly handling quoted values that may contain commas (e.g., an address field). After splitting, each field is trimmed and any surrounding double-quotes are stripped.
+Each subsequent line is passed to `parseCsvLine()`, which splits it into fields while correctly handling quoted values that may contain commas (e.g., an address field). After splitting, each field is trimmed and any surrounding double quotes are stripped.
 
 Only rows with at least 6 columns and a non-empty Employee # are kept. The result is a `String[][]` where each row represents one attendance record with columns:
 
