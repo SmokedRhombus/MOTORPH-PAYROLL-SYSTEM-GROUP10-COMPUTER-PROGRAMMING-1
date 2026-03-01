@@ -13,8 +13,6 @@ A command-line Java application for **MotorPH's Payroll Module** made by Group 1
 
 ---
 
----
-
 ## Features
 
 - **View Employee Information** — displays all employee details (Employee #, Name, Birthday, Address, Government IDs, Position, Salary, etc.)
