@@ -120,7 +120,6 @@ java MotorPHPayroll
 ```
 =======================================================
               MOTORPH PAYROLL SYSTEM                   
-           Phase 1 - Basic Payroll Module              
 =======================================================
 
 MAIN MENU
