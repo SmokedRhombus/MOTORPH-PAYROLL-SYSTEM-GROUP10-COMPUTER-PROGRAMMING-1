@@ -169,13 +169,13 @@ Enter choice (1-7): 1
 
 ## How the Code Works
 
-This section explains every part of the program in detail — what each piece does, why it works the way it does, and how all the parts connect together.
+This section explains every part of the program in detail what each piece does, why it works the way it does, and how all the parts connect together.
 
 ---
 
 ### Program Structure Overview
 
-The entire program lives in one class (`MotorPHPayroll`) and is organized into logical groups of static methods. There are no objects, no inheritance, and no constructors — just a `main` method that calls other methods directly. Data is passed around as plain arrays (`String[][]`).
+The entire program lives in one class (`MotorPHPayroll`) and is organized into logical groups of static methods. There are no objects, no inheritance, and no constructors just a `main` method that calls other methods directly. Data is passed around as plain arrays (`String[][]`).
 
 ```
 main()
