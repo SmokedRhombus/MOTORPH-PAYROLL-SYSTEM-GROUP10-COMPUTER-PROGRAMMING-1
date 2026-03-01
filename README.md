@@ -1,6 +1,6 @@
 # MotorPH Payroll System
 
-A command-line Java application for **MotorPH's Payroll Module** made by Group 10 that presents employee information and calculates salaries with government-mandated deductions, built as a single `.java` file with no OOP concepts and no external libraries.
+A command line Java application for **MotorPH's Payroll Module** made by Group 10 that presents employee information and calculates salaries with government-mandated deductions, built as a single `.java` file with no OOP concepts and no external libraries.
 
 
 ## Members
