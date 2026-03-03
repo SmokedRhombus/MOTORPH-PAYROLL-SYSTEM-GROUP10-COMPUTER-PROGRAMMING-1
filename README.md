@@ -5,10 +5,10 @@ A command line Java application for **MotorPH** made by MO-IT101 Group 10 that p
 ---
 ##Members
 ---
-Miguel Dominic E. Roa
-Kreskin Bejoc
-Carlos Louis Acula
-April Joyce Abejo 
+- Miguel Dominic E. Roa
+- Kreskin Bejoc
+- Carlos Louis Acula
+- April Joyce Abejo 
 
 ## Features
 
