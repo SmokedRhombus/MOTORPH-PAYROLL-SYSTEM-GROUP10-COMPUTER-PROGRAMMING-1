@@ -319,12 +319,6 @@ An employee logs in at `8:59` and logs out at `18:31`:
 
 This method loops through all seven months (June–December 2024) and prints two cutoff blocks per month for the given employee. This is the core output method for `payroll_staff`.
 
-**Why two cutoff blocks per month?**
-Per the process flow, the 1st cutoff (days 1–15) is a partial advance — it shows gross and net salary but carries no deductions. The 2nd cutoff (days 16–end of month) is the full payout where all government deductions are applied and itemized.
-
-**Why compute deductions on the combined gross?**
-Government contributions (SSS, Philhealth, Pag-ibig) and withholding tax are computed on a **monthly** basis, not per cutoff. Adding the two cutoffs together first gives the true monthly gross, which then feeds into the correct deduction bracket. Computing deductions on each half-month separately would produce a different (and incorrect) result.
-
 The full calculation sequence per month:
 ```
 Hours1        = calculateHoursWorked( days 1–15 )
@@ -343,8 +337,6 @@ TotalDeductions = SSS + Philhealth + Pagibig + Tax
 1st Cutoff Net Salary = Gross1               ← no deductions
 2nd Cutoff Net Salary = Gross2 − TotalDeductions ← all deductions here
 ```
-
-Note that allowances (rice subsidy, phone, clothing) are **not included** in the gross pay calculation, as specified in the process flow.
 
 ---
 
