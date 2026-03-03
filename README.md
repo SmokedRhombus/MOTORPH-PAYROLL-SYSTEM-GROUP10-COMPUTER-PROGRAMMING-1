@@ -3,7 +3,7 @@
 A command line Java application for **MotorPH** made by MO-IT101 Group 10 that presents employee information and calculates salaries with government mandated deductions, built as a single `.java` file with no OOP concepts and no external libraries.
 
 ---
-##Members
+Members
 ---
 - Miguel Dominic E. Roa
 - Kreskin Bejoc
