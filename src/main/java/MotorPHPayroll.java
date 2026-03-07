@@ -21,29 +21,31 @@ public class MotorPHPayroll {
         System.out.println("              MOTORPH PAYROLL SYSTEM                   ");
         System.out.println("=======================================================");
 
-        // --- LOGIN ---
-        System.out.println();
-        System.out.print("Username: ");
-        String username = sc.nextLine().trim();
-        System.out.print("Password: ");
-        String password = sc.nextLine().trim();
+        boolean motorPHPayrollSystemRunning = true;
+        while (motorPHPayrollSystemRunning) {
+            // --- LOGIN ---
+            System.out.println();
+            System.out.print("Username: ");
+            String username = sc.nextLine().trim();
+            System.out.print("Password: ");
+            String password = sc.nextLine().trim();
 
-        boolean validUsername = username.equals("employee") || username.equals("payroll_staff");
-        boolean validPassword = password.equals("12345");
+            boolean validUsername = username.equals("employee") || username.equals("payroll_staff");
+            boolean validPassword = password.equals("12345");
 
-        if (!validUsername || !validPassword) {
-            System.out.println("Incorrect username and/or password.");
-            sc.close();
-            return;
+            if (!validUsername || !validPassword) {
+                System.out.println("Incorrect username and/or password.");
+                continue;
+            }
+
+            // --- ROUTE BY USERNAME ---
+            if (username.equals("employee")) {
+                runEmployeeMenu(sc, employees);
+            } else {
+                runPayrollStaffMenu(sc, employees, attendance);
+            }
+            motorPHPayrollSystemRunning = false;
         }
-
-        // --- ROUTE BY USERNAME ---
-        if (username.equals("employee")) {
-            runEmployeeMenu(sc, employees);
-        } else {
-            runPayrollStaffMenu(sc, employees, attendance);
-        }
-
         sc.close();
     }
 

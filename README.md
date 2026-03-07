@@ -15,7 +15,7 @@ Members
 **Login System**
 - Requires a username and password to access the program
 - Two roles: `employee` and `payroll_staff`, each with a different menu
-- Wrong credentials immediately terminate the program
+- Invalid credentials show an error and prompt for login again; the program exits only when you choose **Exit** from the role menu
 
 **Employee role** — view personal info only (Employee #, Name, Birthday)
 
@@ -66,14 +66,19 @@ Hourly Rate = Basic Salary / 21 / 8
 ## Repository Structure
 
 ```
-MotorPHPayroll/
-├── MotorPHPayroll.java       ← Single Java source file (all logic)
-├── attendance.csv            ← Required at runtime (not tracked in git — see setup)
+MO-IT101-Group-10/
+├── pom.xml                   ← Maven build (Java 11, JUnit 5 for tests)
+├── src/
+│   ├── main/java/
+│   │   └── MotorPHPayroll.java   ← Single Java source file (all logic)
+│   └── test/java/
+│       └── MotorPHPayrollTest.java   ← Unit tests for payroll calculations
+├── attendance.csv            ← Required at runtime (place in project root; not tracked in git — see setup)
 └── README.md
 ```
 
 > Employee data (all 34 employees) is **embedded directly** in `MotorPHPayroll.java`.  
-> Attendance data is **read from `attendance.csv`** at runtime.
+> Attendance data is **read from `attendance.csv`** at runtime (current directory when you run the app).
 
 ---
 
@@ -81,6 +86,7 @@ MotorPHPayroll/
 
 ### Prerequisites
 - **Java JDK 11 or higher**
+- **Apache Maven** (for build and tests), or use your IDE’s Maven support
 - **VSCode** (recommended) with the [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 
 ### Step 1 — Export Attendance CSV
@@ -89,29 +95,47 @@ MotorPHPayroll/
 2. Click the **`Attendance Record`** sheet tab at the bottom
 3. Go to **File → Save As → CSV (Comma delimited) (.csv)**
 4. Save the file as **`attendance.csv`**
-5. Place `attendance.csv` in the **same folder** as `MotorPHPayroll.java`
+5. Place `attendance.csv` in the **project root** (same folder as `pom.xml`)
 
 > The CSV must have these columns (header row is automatically skipped):
 > `EmpNum, LastName, FirstName, Date, LogIn, LogOut`  
 > Date format: `M/D/YYYY` · Time format: `H:MM` or `HH:MM`
 
-### Step 2 — Compile
+### Step 2 — Build and run with Maven
 
+**Compile:**
 ```bash
-javac MotorPHPayroll.java
+mvn compile
 ```
 
-### Step 3 — Run
+**Run the application:**
+```bash
+mvn exec:java -Dexec.mainClass="MotorPHPayroll"
+```
+
+**Run unit tests:**
+```bash
+mvn test
+```
+
+Tests cover payroll formulas: Total Hours Worked (grace period, end cap, lunch), Gross Salary, deductions (SSS, Philhealth, Pag-ibig, Withholding Tax), and Net Salary for 1st and 2nd cutoff.
+
+### Alternative: compile and run without Maven
+
+From the project root, with `MotorPHPayroll.java` in `src/main/java/`:
 
 ```bash
-java MotorPHPayroll
+javac src/main/java/MotorPHPayroll.java -d target/classes
+java -cp target/classes MotorPHPayroll
 ```
+
+(Place `attendance.csv` in the project root, then run the `java` command from the project root so the app finds the file.)
 
 ### Running in VSCode
 
 1. Open the project folder in VSCode
-2. Place `attendance.csv` in the same folder
-3. Open `MotorPHPayroll.java`
+2. Place `attendance.csv` in the project root
+3. Open `MotorPHPayroll.java` (under `src/main/java`)
 4. Click the **▷ Run** button (top right) or press `F5`
 5. Interact with the menu in the **Terminal** panel
 
