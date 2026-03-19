@@ -448,3 +448,5 @@ Executive, HR, Accounting, Payroll, Account Management, IT, Sales & Marketing, S
 ## References
 
 - [MotorPH Company Website](https://sites.google.com/mmdc.mcl.edu.ph/motorph/home)
+- [Project Plan](https://docs.google.com/spreadsheets/d/1o4hmXrgOY9vOVvU4HcJhpKbJ6J8Cu6tbh24BxdUfr0A/edit?usp=sharing)
+- [QA Test Case Document] (https://docs.google.com/spreadsheets/d/1YGbr8LTYup-RlaLbs-GDL_CCxhEaVYuNioOenvs1CoQ/edit?usp=sharing)
